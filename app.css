@@ -4,3 +4,12 @@
     padding: 0;
     margin: 0;
 }
+/* Root Declaration*/
+:root {
+    --Orange: #DA722C;
+    --Blue : #057ADA;
+    --lightBlue: #E8F7FB;
+    --darkBlue: #023047;
+    --Black: #070917;
+    --skyBlue: #6F7DFB;
+}
