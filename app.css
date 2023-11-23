@@ -1,5 +1,7 @@
 /* Global Declaration*/
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -12,4 +14,18 @@
     --darkBlue: #023047;
     --Black: #070917;
     --skyBlue: #6F7DFB;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
+.btn {
+    cursor: pointer; 
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+li {
+    list-style: none;
 }
