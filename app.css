@@ -19,13 +19,36 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #fff;
 }
-.btn {
-    cursor: pointer; 
-}
 a {
     cursor: pointer;
     text-decoration: none;
 }
 li {
     list-style: none;
+}
+.btn {
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.13em;
+    position: relative;
+}
+.btn.btn-orange {
+    background-color: var(--Orange);
+}
+.btn.btn-dark {
+    background-color: var(--darkBlue);
+}
+.btn.pencil-icon::before {
+    content: url(images/Vector-pencilArt.svg);
+    padding-right: 5px;
+    position: inherit;
+}
+section {
+    max-width: 1134px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background-color: pink;
 }
