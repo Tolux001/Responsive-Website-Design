@@ -55,6 +55,7 @@ header {
 }
 nav {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     border-radius: 1.5em;
@@ -63,6 +64,9 @@ nav {
     width: 70em;
     z-index: 100;
     transition: all 1s ease;
+}
+nav.mobile--nav{
+    display: none;
 }
 .scrolled {
     background: var(--Black);
@@ -555,6 +559,65 @@ p.custom {
         bottom: 4px;
     }
 }
-@media (max-width:780px) {
-    
+@media (max-width:800px) {
+    nav.desktop--nav {
+        display: none;
+    }
+    nav.mobile--nav {
+        display: flex;
+    }
+    .nav--bar--mobile {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top:0;
+        left: 100%;
+        background-color: var(--Black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 110;
+        transition: 1s ease all;
+    }
+    .nav--bar--mobile.active {
+        left: 0;
+    }
+    .close--icon {
+        position: fixed;
+        top: 32px;
+        right: 100px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 400ms ease;
+    }
+    .nav--bar--mobile.active .close--icon {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .nav--bar--mobile ul li {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .nav--bar--mobile ul li a{
+        color: var(--White);
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    /* .header--wrapper,
+    .testimonial--section,
+    .course--section,
+    .footer--wrapper {
+        padding: 0 32px;
+    }
+    nav {
+        padding: 0 50px;
+    }
+    .section--left p {
+        width: 100%;
+    }
+    .scrolled {
+        padding: 8px 1em;
+    } */
 }
