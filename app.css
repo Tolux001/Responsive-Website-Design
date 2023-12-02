@@ -47,7 +47,6 @@ li {
 header {
     background: linear-gradient(180deg, #b877fa 32%, #2e3ecc 100%);
     width: 100%;
-    height: 100vh;
 }
 .header--wrapper {
     max-width: 70em;
@@ -100,7 +99,6 @@ nav.mobile--nav,
 .hero--section{
     display: flex;
     flex-flow: row nowrap;
-    height: 100vh;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -262,6 +260,9 @@ nav.mobile--nav,
         opacity: 0;
         pointer-events: none;
         transition: all 400ms ease;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 2px 5px;
     }
     .nav--bar--mobile.active .close--icon {
         opacity: 1;
@@ -277,11 +278,13 @@ nav.mobile--nav,
         font-size: 18px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 678px) {
     .header--wrapper,
-    .testimonial--section,
+    .testimonial--section {
+        padding: 0 1em;
+    }
     nav.mobile--nav {
-        padding: 0 32px;
+        padding: 0 2em;
     }
     .section--left p {
         width: 100%;
@@ -293,29 +296,48 @@ nav.mobile--nav,
         right: 16px;
     }
     header, .header--wrapper, .hero--section {
-    min-height: 900px;
+    min-height: 950px;
+    }
+    .section--left {
+        padding-top: 5em;
     }
     .hero--section .section--left h1 {
         font-size: 28px;
     }
     .section--right img {
         height: 400px;
-        transform: translateX(50px);
+        transform: translateX(70px);
     }
+    header {
+        overflow: hidden;
+        }
     .section--right {
         overflow: hidden;
-        transform: translateX(30px)
+        transform: translateX(50px)
+    }
+    .section--card__content h2 {
+        font-size: 26px;
+    }
+    .section--card__content {
+        padding: 0.5em 20px;
     }
     .section--card.students--enrolled {
         left: 10px;
-        top: 600px;
+        top: 664px;
     }
     .section--card.overall--rating {
         left: 0;
-        top: 750px;
+        top: 824px;
     }
 }
-
+@media (max-width:300px) {
+    .section--card.students--enrolled {
+        display: none;
+    }
+    .section--card.overall--rating {
+        display: none;
+    }
+}
 section {
     padding-top: 6.4em;
 }
@@ -640,12 +662,24 @@ p.custom {
         grid-column: 1 / 3;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 678px) {
     section h2 {
         font-size: 30px;
     }
     .testimonial--card__content h4 {
         font-size: 18px;
+    }
+    .testimonial--card__text p {
+        font-size: 1em;
+    }
+    .testimonial--card__text {
+        padding: 1em 24px;
+    }
+    .testimonial--card__content > div {
+        padding: 24px 106px 24px 24px;
+    }
+    .testimonial--card__content img {
+        right: 16px;
     }
     .testimonial--card__content p {
         font-size: 14px;
